@@ -28,7 +28,7 @@ jobs:
           EOM
 
       - name: Authenticate using Bundler
-        run: bundle config https://rubygems.pkg.github.com/omu token:${{ secrets.READ_PACKAGES_TOKEN }}
+        run: bundle config https://rubygems.pkg.github.com/omu token:${{ github.token }}
 
       - name: Install using Bundler
         run: bundle install
@@ -55,7 +55,7 @@ jobs:
           :bulk_threshold: 1000
           :sources:
           - https://rubygems.org/
-          - https://token:${{ secrets.READ_PACKAGES_TOKEN }}@rubygems.pkg.github.com/omu/
+          - https://token:${{ github.token }}@rubygems.pkg.github.com/omu/
           :update_sources: true
           :verbose: true  
           EOM

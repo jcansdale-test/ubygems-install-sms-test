@@ -16,15 +16,15 @@ jobs:
         run: |
           cat > Gemfile << EOM
           source "https://rubygems.pkg.github.com/omu" do
-            gem "rubygems-publish"
+            gem "sms"
           end
           EOM
 
       - name: Add main.rb
         run: |
           cat > main.rb << EOM
-          require 'rubygems-publish'
-          RubyGemsPublish.hello
+          require 'sms'
+          puts 'hello!'
           EOM
 
       - name: Authenticate using Bundler
@@ -61,13 +61,13 @@ jobs:
           EOM
 
       - name: Install Gem
-        run: gem install rubygems-publish
+        run: gem install sms
 
       - name: Add main.rb
         run: |
           cat > main.rb << EOM
-          require 'rubygems-publish'
-          RubyGemsPublish.hello
+          require 'sms'
+          puts 'hello!'
           EOM
 
       - name: Run using ruby

@@ -16,7 +16,7 @@ jobs:
         run: |
           cat > Gemfile << EOM
           source "https://rubygems.pkg.github.com/omu" do
-            gem "sms"
+            gem "sms", "0.3.0"
           end
           EOM
 
@@ -61,7 +61,7 @@ jobs:
           EOM
 
       - name: Install Gem
-        run: gem install sms
+        run: gem install sms --version "0.3.0"
 
       - name: Add main.rb
         run: |

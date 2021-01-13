@@ -23,7 +23,6 @@ jobs:
       - name: Add main.rb
         run: |
           cat > main.rb << EOM
-          require 'sms'
           puts 'hello!'
           EOM
 
@@ -66,7 +65,6 @@ jobs:
       - name: Add main.rb
         run: |
           cat > main.rb << EOM
-          require 'sms'
           puts 'hello!'
           EOM
 
